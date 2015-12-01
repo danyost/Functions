@@ -12,7 +12,19 @@ void setup(){
 void draw(){
   time++;
   
+  randomCircle(time);
+  randomSquare(time);
   randomJon(time); 
+}
+
+void randomCircle(int col){
+  fill(col % 255, 0, 255 - (col % 255));
+  ellipse(mouseX, mouseY, random(50, 100), random(50, 100));
+}
+
+void randomSquare(int col){
+  fill(col % 255, 0, 255 - (col % 255));
+  rect(random(width), random(height), random(width), random(height));
 }
 
 void randomJon(int col){
