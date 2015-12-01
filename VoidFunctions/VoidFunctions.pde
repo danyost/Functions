@@ -16,6 +16,6 @@ void draw(){
 }
 
 void randomJon(int col){
-  tint(col % 255, col % 255, 255 - (col % 255));
+  tint(col % 255, 0, 255 - (col % 255));
   image(jon, random(width), random(height));
 }
